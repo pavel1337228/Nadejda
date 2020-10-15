@@ -15,7 +15,7 @@ public class GoldMining : MonoBehaviour
 
     void OnMouseDown()
     {
-        hp.health = hp.health - 35f;
+        hp.health = hp.health - 25f;
         hp.mana += 25f;
     }
 
