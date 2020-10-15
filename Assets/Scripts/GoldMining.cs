@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,13 +15,13 @@ public class GoldMining : MonoBehaviour
 
     void OnMouseDown()
     {
-        hp.health = hp.health - 25f;
-        hp.mana += 25f;
+        hp.health = hp.health - 34f;
+        hp.mana += 34f;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
+    }я
 }
