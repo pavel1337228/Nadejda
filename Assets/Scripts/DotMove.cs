@@ -12,6 +12,8 @@ public class DotMove : MonoBehaviour
     public float timer;
     private int lastI;
     private float fliper;
+    public float randStart;
+    public float randFinish;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,8 @@ public class DotMove : MonoBehaviour
         anim = GetComponent<Animator>();
         Char = GetComponent<RectTransform>();
         massive = GameObject.FindGameObjectsWithTag("Dot");
-        i = Random.Range(0, 3);
-        timer = Random.Range(10f,15f);
+        i = Random.Range(0, massive.Length);
+        timer = Random.Range(randStart, randFinish);
     }
 
     void Flip()
@@ -53,12 +55,12 @@ public class DotMove : MonoBehaviour
             {
                 anim.SetBool("idleMove", false);
                
-                i = Random.Range(0, 3);
+                i = Random.Range(0, massive.Length);
                 while (i == lastI)
                 {
-                    i = Random.Range(0, 3);
+                    i = Random.Range(0, massive.Length);
                 }   
-                timer = Random.Range(10f,15f);
+                timer = Random.Range(randStart, randFinish);
             }
         }
                 //Char.anchoredPosition = Mathf.Lerp(Char.anchoredPosition, massive[2].GetComponent<RectTransform>(), Time.deltaTime*2);
