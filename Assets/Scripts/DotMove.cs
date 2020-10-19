@@ -7,28 +7,61 @@ public class DotMove : MonoBehaviour
 
     private RectTransform Char;
     private GameObject[] massive;
+    private Animator anim;
     private int i;
+    public float timer;
+    private int lastI;
+    private float fliper;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         Char = GetComponent<RectTransform>();
         massive = GameObject.FindGameObjectsWithTag("Dot");
         i = Random.Range(0, 3);
+        timer = Random.Range(10f,15f);
+    }
+
+    void Flip()
+    {
+        if (fliper <= Char.transform.position.x)
+        {
+            Char.transform.rotation = Quaternion.Euler(0,0,0);
+        }
+        if (fliper >= Char.transform.position.x)
+        {
+            Char.transform.rotation = Quaternion.Euler(0,-180,0);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Char.transform.position != massive[i].GetComponent<RectTransform>().transform.position)
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
-            Char.transform.position = Vector3.MoveTowards(Char.transform.position, massive[i].GetComponent<RectTransform>().transform.position, Time.deltaTime);
+            fliper = Char.transform.position.x;
+            if (Char.transform.position != massive[i].GetComponent<RectTransform>().transform.position)
+            {
+                Char.transform.position = Vector3.MoveTowards(Char.transform.position, massive[i].GetComponent<RectTransform>().transform.position, Time.deltaTime*1.3f);
+                anim.SetBool("idleMove", true);
+                Flip();
+                lastI = i;
+            }
+            if (Char.transform.position == massive[i].GetComponent<RectTransform>().transform.position)
+            {
+                anim.SetBool("idleMove", false);
+               
+                i = Random.Range(0, 3);
+                while (i == lastI)
+                {
+                    i = Random.Range(0, 3);
+                }   
+                timer = Random.Range(10f,15f);
+            }
         }
-        if (Char.transform.position == massive[i].GetComponent<RectTransform>().transform.position)
-        {
-            i = Random.Range(0, 3);
-        }
-        //Char.anchoredPosition = Mathf.Lerp(Char.anchoredPosition, massive[2].GetComponent<RectTransform>(), Time.deltaTime*2);
+                //Char.anchoredPosition = Mathf.Lerp(Char.anchoredPosition, massive[2].GetComponent<RectTransform>(), Time.deltaTime*2);
         //Char.anchoredPosition = new Vector2(massive[2].GetComponent<RectTransform>().anchoredPosition, massive[2].GetComponent<RectTransform>().anchoredPosition);
     }
 }

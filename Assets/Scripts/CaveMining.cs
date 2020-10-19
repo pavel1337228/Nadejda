@@ -7,17 +7,25 @@ using UnityEngine.SceneManagement;
 
 public class CaveMining : MonoBehaviour
 {	
-	private Statistic take;
 
-    // Start is called before the first frame update
+	public GameObject player;
+	public GameObject stone;
+	private RectTransform playerrt;
+	private RectTransform stonert;
+
     void Start()
     {
-        
+    	playerrt = player.GetComponent<RectTransform>();
+    	stonert = stone.GetComponent<RectTransform>();    
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+    	playerrt.anchoredPosition = stonert.anchoredPosition * Time.deltaTime;	    
+    }
+
+    public void OnClick()
+    {
+    	playerrt.anchoredPosition = stonert.anchoredPosition * Time.deltaTime;
     }
 }

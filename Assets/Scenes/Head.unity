@@ -691,7 +691,7 @@ RectTransform:
   m_LocalScale: {x: 121.78116, y: 39.578876, z: 84}
   m_Children: []
   m_Father: {fileID: 2039689510}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -872,7 +872,7 @@ Transform:
   m_LocalScale: {x: 180.00002, y: 180.00002, z: 0}
   m_Children: []
   m_Father: {fileID: 2039689510}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &393651361
 SpriteRenderer:
@@ -954,7 +954,7 @@ Transform:
   m_LocalScale: {x: 180.00002, y: 180.00002, z: 0}
   m_Children: []
   m_Father: {fileID: 2039689510}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &400997530
 SpriteRenderer:
@@ -1601,7 +1601,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1107502590693341580, guid: 11a85481a4b068d41b66843e28443880, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1841,7 +1841,7 @@ Transform:
   m_LocalScale: {x: 180.00002, y: 180.00002, z: 0}
   m_Children: []
   m_Father: {fileID: 2039689510}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1088725976
 SpriteRenderer:
@@ -2778,7 +2778,7 @@ Transform:
   m_LocalScale: {x: 180.00002, y: 180.00002, z: 0}
   m_Children: []
   m_Father: {fileID: 2039689510}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1796551671
 SpriteRenderer:
@@ -2995,13 +2995,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 0}
   m_Children:
-  - {fileID: 400997529}
+  - {fileID: 291519153}
   - {fileID: 67244654}
   - {fileID: 152818575}
-  - {fileID: 393651360}
   - {fileID: 1796551670}
   - {fileID: 1088725975}
-  - {fileID: 291519153}
+  - {fileID: 393651360}
+  - {fileID: 400997529}
   m_Father: {fileID: 1451247535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3018,7 +3018,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039689509}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 61d62746abb98f540a7d4ea37f942056, type: 2}
   m_CullingMode: 0
@@ -3054,6 +3054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb03b77f8516dd04e874227a4064a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 5
 --- !u!61 &2039689514
 BoxCollider2D:
   m_ObjectHideFlags: 0
