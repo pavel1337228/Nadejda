@@ -77,6 +77,9 @@ TextureImporter:
   - first:
       213: 4837530655254977132
     second: KnifeHealth
+  - first:
+      213: 7396036444698067316
+    second: "\u043A\u043B\u0438\u043D\u043E\u0447\u0435\u043A"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -637,7 +640,7 @@ TextureImporter:
         width: 60
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -650,22 +653,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnifeHealth
+      name: "\u043A\u043B\u0438\u043D\u043E\u0447\u0435\u043A"
       rect:
         serializedVersion: 2
-        x: 166
+        x: 164
         y: 15
-        width: 44
-        height: 4
+        width: 60
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a1988208c522340800000000000000
-      internalID: 4837530655254977132
+      spriteID: 4714218e5fff3a660800000000000000
+      internalID: 7396036444698067316
       vertices: []
       indices: 
       edges: []

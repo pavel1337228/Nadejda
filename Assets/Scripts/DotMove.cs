@@ -46,7 +46,7 @@ public class DotMove : MonoBehaviour
             fliper = Char.transform.position.x;
             if (Char.transform.position != massive[i].GetComponent<RectTransform>().transform.position)
             {
-                Char.transform.position = Vector3.MoveTowards(Char.transform.position, massive[i].GetComponent<RectTransform>().transform.position, Time.deltaTime*1.3f);
+                Char.transform.position = Vector3.MoveTowards(Char.transform.position, massive[i].GetComponent<RectTransform>().transform.position, Time.deltaTime*0.8f);
                 anim.SetBool("idleMove", true);
                 Flip();
                 lastI = i;
